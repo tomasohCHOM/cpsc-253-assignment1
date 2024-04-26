@@ -9,7 +9,7 @@ Make sure you have Python installed on your machine (version 3.12.0 and above). 
 Clone this repository by running the following:
 
 ```bash
-[git clone https://github.com/tomasohCHOM/CanvasFindPeople.git](https://github.com/tomasohCHOM/cpsc-253-assignment2.git)
+git clone https://github.com/tomasohCHOM/cpsc-253-assignment2.git
 cd cpsc-253-assignment2
 ```
 
