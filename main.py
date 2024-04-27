@@ -33,12 +33,10 @@ if __name__ == "__main__":
     for i in range(NUM_MESSAGES):
         print(f"MESSAGE #{i+1}\n")
         # Call the function decrypt for cipher text #1
-        msg = decrypt(priv_key_file="prv.key", cipher_file=f"cipher{i+1}.bin").decode(
-            "utf-8"
-        )
+        msg = decrypt(priv_key_file="prv.key", cipher_file=f"cipher{i+1}.bin").decode()
         # Print it and pipe the contents to output1.txt
         print(msg, "\n")
-        with open(f"output{i+1}.txt", "w", encoding="utf-8") as text_file:
+        with open(f"to_plaintxt{i+1}.txt", "w") as text_file:
             text_file.write(msg)
 
     print("Finished decrypting all messages!")
