@@ -22,10 +22,12 @@ def decrypt_ciphers(priv_key_file: str, ciphers: list[str]):
 
         # Indicate what message number it is
         print(f"MESSAGE #{i+1}\n")
-        # Print msg and pipe it contents to to_plaintxt{i+1}.txt
-        print(msg, "\n")
-        with open(f"to_plaintxt{i+1}.txt", "w") as text_file:
+
+        # Pipe message contents to to_plaintxt{i+1}.txt
+        with open(f"to_plaintxt{i+1}.txt", "w", encoding="windows-1252") as text_file:
             text_file.write(msg)
+        # Print the message contents
+        print(open(f"to_plaintxt{i+1}.txt", "r", encoding="utf-8").read(), "\n")
 
 
 # Let ciphers = all the cipher files that we wish to decrypt
