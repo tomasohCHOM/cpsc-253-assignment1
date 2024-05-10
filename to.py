@@ -20,12 +20,12 @@ def decrypt_ciphers(priv_key_file: str, ciphers: list[str]):
         # Decrypt the message using rsa.decrypt() and store the contents in "msg"
         msg = rsa.decrypt(crypto=crypto, priv_key=priv_key).decode()
 
-        # Indicate what message number it is
-        print(f"MESSAGE #{i+1}\n")
-
         # Pipe message contents to to_plaintxt{i+1}.txt
         with open(f"to_plaintxt{i+1}.txt", "w", encoding="windows-1252") as text_file:
             text_file.write(msg)
+
+        # Indicate what message number it is
+        print(f"MESSAGE #{i+1}\n")
         # Print the message contents
         print(open(f"to_plaintxt{i+1}.txt", "r", encoding="utf-8").read(), "\n")
 
